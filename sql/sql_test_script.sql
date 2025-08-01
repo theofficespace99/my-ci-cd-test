@@ -40,3 +40,6 @@ RETURN
                 AND sec.Email_ID = SESSION_CONTEXT(N'user_email')
         );
 GO
+
+
+--Hii new changes made
