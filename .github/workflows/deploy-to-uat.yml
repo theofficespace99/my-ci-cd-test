@@ -1,0 +1,20 @@
+# .github/workflows/deploy-to-uat.yml
+name: Deploy to UAT
+
+on:
+  push:
+    branches:
+      - uat
+
+jobs:
+  simulate-uat-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Show Changed Files
+        run: git diff --name-only HEAD~1 HEAD
+
+      - name: Simulate UAT Deployment
+        run: echo "✅ Simulating deployment to UAT SQL Server..."
